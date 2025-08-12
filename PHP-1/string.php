@@ -46,7 +46,7 @@
         */
         $string3 = "PHP is old but sexy!";
         echo "String: ". $string3 ."<br> ";
-        echo "ganti kalimat: ". str_replace("sexy" . "awesome" . $string3);
+        echo "ganti kalimat: " . str_replace("sexy" . "awesome" . $string3);
         // OUTPUT : "PHP is old but awesome"
 
     ?>
