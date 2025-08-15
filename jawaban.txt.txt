@@ -1,0 +1,27 @@
+1.buat database
+CREATE DATABASE myshop;
+
+
+2.buat table
+genres
+CREATE TABLE genres ( id integer AUTO_INCREMENT PRIMARY KEY, name varchar(255)NOT null );
+
+books
+CREATE TABLE books( id integer AUTO_INCREMENT PRIMARY KEY, title varchar(255)NOT null, stock integer NOT null, genre_id integer NOT null, FOREIGN KEY(genre_id) REFERENCES genres(id) );
+
+3.insert data
+INSERT INTO genres(name) VALUES ("comedy"), ("drama"), ("action");
+
+INSERT INTO books(title, stock, genre_id) VALUES("sumsangb50", 100, 1);
+
+INSERT INTO books(title, stock, genre_id) VALUES("IMHO Watch", 200, 3);
+
+INSERT INTO books(title, stock, genre_id) VALUES("Uniklooh", 150, 2);
+
+
+4.SELECT * FROM books WHERE stock > 150;
+
+
+5.update data
+UPDATE books SET stock=500 WHERE id = 4;
+
