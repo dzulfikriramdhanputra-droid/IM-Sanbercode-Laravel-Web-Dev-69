@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
-</head>
-<body>
+@extends('layouts.master')
+
+@section('title')
+    Register
+@endsection
+@section('content')
     <h1>Buat Account Baru!</h1>
     <h2>Sign Up form</h2>
     <form action="/kirim" method="POST">
@@ -39,4 +37,4 @@
         <br>
         <input type="submit" value="Sign Up">
     </form>
-</body>
+@endsection
