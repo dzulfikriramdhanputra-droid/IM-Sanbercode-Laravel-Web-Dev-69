@@ -35,17 +35,17 @@ class GenreController extends Controller
     {
         $genres = DB::table('genres')->get();
  
-        return view('genre.tampil', ['genre' => $genres]);
+        return view('genres.tampil', ['genres' => $genres]);
     }
     public function show($id)
     {
-        $genre = DB::table('genres')->find($id);
+        $genre = DB::table('genre')->find($id);
 
-        return view('genre.detail', ['genre' => $genre]);
+        return view('genres.detail', ['genre' => $genre]);
     }
     public function edit($id)
     {
-        $genre = DB::table('genres')->find($id);
+        $genre = DB::table('genre')->find($id);
 
         return view('genre.edit', ['genre' => $genre]);
     }

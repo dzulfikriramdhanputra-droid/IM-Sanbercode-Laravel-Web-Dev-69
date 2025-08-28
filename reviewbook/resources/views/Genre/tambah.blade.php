@@ -5,7 +5,7 @@
 @endsection
 @section('content')
 <form method="POST" action="/genre">
-
+@csrf
     @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
@@ -18,7 +18,7 @@
     @csrf
     <div class="mb-3">
       <label class="form-label">Genre Name</label>
-      <input type="email" class="form-control" name="name">
+      <input type="text" class="form-control" name="name">
     </div>
     <div class="mb-3">
       <label class="form-label">Genre Description</label>
